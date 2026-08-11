@@ -1,14 +1,8 @@
-/* =====================================================
-   KHEVNA UGC PORTFOLIO
-   Editorial + Clean Design
-===================================================== */
-
 @import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500;1,600&display=swap');
 
-
-/* =====================================================
+/* =========================
    VARIABLES
-===================================================== */
+========================= */
 
 :root {
     --cream: #f7f2ec;
@@ -28,9 +22,9 @@
 }
 
 
-/* =====================================================
+/* =========================
    RESET
-===================================================== */
+========================= */
 
 * {
     margin: 0;
@@ -65,13 +59,13 @@ button {
 }
 
 
-/* =====================================================
+/* =========================
    NAVIGATION
-===================================================== */
+========================= */
 
 .navbar {
     width: 100%;
-    height: 82px;
+    min-height: 82px;
 
     padding: 0 5%;
 
@@ -121,9 +115,7 @@ button {
     font-size: 12px;
     font-weight: 600;
 
-    transition:
-        background 0.25s ease,
-        transform 0.25s ease;
+    transition: background 0.25s ease, transform 0.25s ease;
 }
 
 .nav-button:hover {
@@ -132,12 +124,12 @@ button {
 }
 
 
-/* =====================================================
+/* =========================
    GENERAL
-===================================================== */
+========================= */
 
 .section {
-    width: min(100% - 10%, var(--max-width));
+    width: min(90%, var(--max-width));
     margin: 0 auto;
     padding: 120px 0;
 }
@@ -179,21 +171,20 @@ button {
     justify-content: center;
 
     border: 1px solid var(--burgundy);
-
     border-radius: 50%;
 
     font-size: 10px;
 }
 
 
-/* =====================================================
+/* =========================
    HERO
-===================================================== */
+========================= */
 
 .hero {
     min-height: calc(100vh - 82px);
 
-    width: min(100% - 10%, var(--max-width));
+    width: min(90%, var(--max-width));
 
     margin: 0 auto;
 
@@ -209,6 +200,8 @@ button {
 
 .hero-content {
     max-width: 650px;
+
+    animation: fadeUp 0.8s ease both;
 }
 
 .hero h1 {
@@ -223,8 +216,6 @@ button {
     line-height: 0.9;
 
     letter-spacing: -0.055em;
-
-    color: var(--black);
 }
 
 .hero h1 span {
@@ -264,9 +255,7 @@ button {
 
     letter-spacing: 0.04em;
 
-    transition:
-        transform 0.25s ease,
-        background 0.25s ease;
+    transition: transform 0.25s ease, background 0.25s ease;
 }
 
 .button:hover {
@@ -294,6 +283,8 @@ button {
 
 .hero-image {
     position: relative;
+
+    animation: fadeUp 0.8s ease 0.15s both;
 }
 
 .hero-image img {
@@ -330,9 +321,9 @@ button {
 }
 
 
-/* =====================================================
+/* =========================
    INTRO STRIP
-===================================================== */
+========================= */
 
 .intro-strip {
     border-top: 1px solid var(--border);
@@ -381,9 +372,9 @@ button {
 }
 
 
-/* =====================================================
+/* =========================
    ABOUT
-===================================================== */
+========================= */
 
 .about-grid {
     display: grid;
@@ -472,9 +463,9 @@ button {
 }
 
 
-/* =====================================================
-   DARK SECTION
-===================================================== */
+/* =========================
+   DARK / SERVICES
+========================= */
 
 .dark-section {
     width: 100%;
@@ -488,6 +479,7 @@ button {
 
 .dark-section .section-label {
     width: min(100%, var(--max-width));
+
     margin-left: auto;
     margin-right: auto;
 
@@ -495,7 +487,7 @@ button {
 }
 
 .dark-section .section-label span {
-    border-color: rgba(255,255,255,0.5);
+    border-color: rgba(255, 255, 255, 0.5);
 }
 
 .services-header {
@@ -512,7 +504,7 @@ button {
 }
 
 .services-header .eyebrow {
-    color: rgba(255,255,255,0.65);
+    color: rgba(255, 255, 255, 0.65);
 }
 
 .services-header h2,
@@ -536,7 +528,7 @@ button {
 }
 
 .services-header > p {
-    color: rgba(255,255,255,0.68);
+    color: rgba(255, 255, 255, 0.68);
 
     font-size: 14px;
 
@@ -544,9 +536,9 @@ button {
 }
 
 
-/* =====================================================
+/* =========================
    SERVICES GRID
-===================================================== */
+========================= */
 
 .services-grid {
     width: min(100%, var(--max-width));
@@ -557,8 +549,8 @@ button {
 
     grid-template-columns: repeat(4, 1fr);
 
-    border-top: 1px solid rgba(255,255,255,0.2);
-    border-left: 1px solid rgba(255,255,255,0.2);
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+    border-left: 1px solid rgba(255, 255, 255, 0.2);
 }
 
 .service-card {
@@ -566,20 +558,18 @@ button {
 
     padding: 32px;
 
-    border-right: 1px solid rgba(255,255,255,0.2);
-    border-bottom: 1px solid rgba(255,255,255,0.2);
+    border-right: 1px solid rgba(255, 255, 255, 0.2);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
 
-    transition:
-        background 0.3s ease,
-        transform 0.3s ease;
+    transition: background 0.3s ease;
 }
 
 .service-card:hover {
-    background: rgba(255,255,255,0.07);
+    background: rgba(255, 255, 255, 0.07);
 }
 
 .service-card > span {
-    color: rgba(255,255,255,0.5);
+    color: rgba(255, 255, 255, 0.5);
 
     font-size: 11px;
 }
@@ -595,7 +585,7 @@ button {
 }
 
 .service-card p {
-    color: rgba(255,255,255,0.6);
+    color: rgba(255, 255, 255, 0.6);
 
     font-size: 13px;
 
@@ -603,9 +593,9 @@ button {
 }
 
 
-/* =====================================================
-   WORK
-===================================================== */
+/* =========================
+   MY WORK
+========================= */
 
 .work-header {
     display: grid;
@@ -650,9 +640,7 @@ button {
 
     font-size: 11px;
 
-    transition:
-        background 0.25s ease,
-        color 0.25s ease;
+    transition: background 0.25s ease, color 0.25s ease;
 }
 
 .filter-button:hover,
@@ -664,9 +652,9 @@ button {
 }
 
 
-/* =====================================================
+/* =========================
    PORTFOLIO GRID
-===================================================== */
+========================= */
 
 .portfolio-grid {
     display: grid;
@@ -683,15 +671,13 @@ button {
 
     border: 1px solid var(--border);
 
-    transition:
-        transform 0.3s ease,
-        box-shadow 0.3s ease;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .portfolio-card:hover {
     transform: translateY(-6px);
 
-    box-shadow: 0 20px 50px rgba(0,0,0,0.08);
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.08);
 }
 
 .portfolio-media {
@@ -765,9 +751,7 @@ button {
 
     font-size: 15px !important;
 
-    transition:
-        background 0.25s ease,
-        color 0.25s ease;
+    transition: background 0.25s ease, color 0.25s ease;
 }
 
 .portfolio-card:hover .arrow {
@@ -776,9 +760,9 @@ button {
 }
 
 
-/* =====================================================
+/* =========================
    WHY WORK WITH ME
-===================================================== */
+========================= */
 
 .why-header {
     margin-bottom: 55px;
@@ -801,8 +785,7 @@ button {
     border-right: 1px solid var(--border);
     border-bottom: 1px solid var(--border);
 
-    transition:
-        background 0.25s ease;
+    transition: background 0.25s ease;
 }
 
 .why-card:hover {
@@ -836,9 +819,9 @@ button {
 }
 
 
-/* =====================================================
+/* =========================
    CONTACT
-===================================================== */
+========================= */
 
 .contact {
     width: 100%;
@@ -909,9 +892,7 @@ button {
     font-size: 12px;
     font-weight: 700;
 
-    transition:
-        background 0.25s ease,
-        transform 0.25s ease;
+    transition: background 0.25s ease, transform 0.25s ease;
 }
 
 .contact-button:hover {
@@ -958,9 +939,9 @@ button {
 }
 
 
-/* =====================================================
+/* =========================
    FOOTER
-===================================================== */
+========================= */
 
 footer {
     min-height: 90px;
@@ -974,7 +955,7 @@ footer {
 
     background: var(--burgundy-dark);
 
-    color: rgba(255,255,255,0.65);
+    color: rgba(255, 255, 255, 0.65);
 
     font-size: 10px;
 
@@ -991,18 +972,9 @@ footer {
 }
 
 
-/* =====================================================
-   ANIMATIONS
-===================================================== */
-
-.hero-content,
-.hero-image {
-    animation: fadeUp 0.8s ease both;
-}
-
-.hero-image {
-    animation-delay: 0.15s;
-}
+/* =========================
+   ANIMATION
+========================= */
 
 @keyframes fadeUp {
 
@@ -1019,9 +991,9 @@ footer {
 }
 
 
-/* =====================================================
-   MOBILE
-===================================================== */
+/* =========================
+   MOBILE / TABLET
+========================= */
 
 @media (max-width: 900px) {
 
@@ -1115,9 +1087,9 @@ footer {
 }
 
 
-/* =====================================================
-   SMALL MOBILE
-===================================================== */
+/* =========================
+   MOBILE
+========================= */
 
 @media (max-width: 600px) {
 
@@ -1241,17 +1213,10 @@ footer {
 }
 
 
-/* =====================================================
-   VIDEO CONTROLS
-===================================================== */
+/* =========================
+   VIDEO
+========================= */
 
 video {
-    background: #171315;
-}
-
-video::-webkit-media-controls-panel {
-    background: linear-gradient(
-        transparent,
-        rgba(0,0,0,0.7)
-    );
+    background: var(--black);
 }
