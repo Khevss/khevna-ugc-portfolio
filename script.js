@@ -7,12 +7,14 @@ filterButtons.forEach(button => {
 
         const filter = button.dataset.filter;
 
+        // Update active button
         filterButtons.forEach(btn => {
             btn.classList.remove("active");
         });
 
         button.classList.add("active");
 
+        // Filter portfolio items
         portfolioCards.forEach(card => {
 
             const category = card.dataset.category;
